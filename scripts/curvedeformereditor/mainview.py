@@ -2,7 +2,8 @@ import os
 import maya.OpenMaya as om
 from maya import cmds
 from PySide2 import QtWidgets, QtCore, QtGui
-from curvedeformereditor.bezierequalizer import (BezierEqualizer)#, copy_bezier_curve)
+from curvedeformereditor.beziercurve import (copy_bezier_curve)
+from curvedeformereditor.bezierequalizer import (BezierEqualizer)
 from curvedeformereditor.nurbsutils import (
     get_deformer_weights_per_cv, set_deformer_weights_per_cv, count_cv)
 
@@ -13,7 +14,6 @@ WINDOW_TITLE = 'Curve Deformer Editor'
 
 def icon(filename):
     path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir, os.pardir, 'icons', filename))
-    print path
     return QtGui.QIcon(path)
 
 
